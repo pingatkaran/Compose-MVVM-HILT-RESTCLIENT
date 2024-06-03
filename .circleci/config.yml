@@ -7,6 +7,10 @@ jobs:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
+      # Adding step to create local.properties file
+      - run:
+          name: Create local.properties
+          command: echo "sdk.dir=/path/to/android-sdk" > local.properties
       - run:
           name: Calculate cache key
           command: |-
