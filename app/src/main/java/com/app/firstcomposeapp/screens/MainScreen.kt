@@ -58,9 +58,6 @@ fun MainScreen(navController: NavHostController,onClick: (data: Data) -> Unit) {
         }
     }
 
-    Text(text = "Sticky Headers", modifier = Modifier.clickable {
-        navController.navigate(Screen.Sticky.route)
-    })
 }
 
 
