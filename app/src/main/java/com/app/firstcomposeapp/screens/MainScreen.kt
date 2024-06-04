@@ -57,6 +57,10 @@ fun MainScreen(navController: NavHostController,onClick: (data: Data) -> Unit) {
             })
         }
     }
+
+    Text(text = "Sticky Headers", modifier = Modifier.clickable {
+        navController.navigate(Screen.Sticky.route)
+    })
 }
 
 
@@ -95,8 +99,6 @@ fun UserItem(data: Data, onClick: (data: Data) -> Unit) {
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.bodyLarge
             )
-
-
 
             Text(
                 text = data.email,
