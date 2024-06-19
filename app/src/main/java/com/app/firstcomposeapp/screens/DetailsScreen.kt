@@ -34,7 +34,7 @@ import java.nio.charset.StandardCharsets
 
 @Composable
 fun DetailsScreen(navController: NavHostController, navBackStackEntry: NavBackStackEntry) {
-    val encodedUserJson = navBackStackEntry.arguments?.getString("userJson")
+    val encodedUserJson = navBackStackEntry.arguments?.getString("userJson") ?: ""
     val userJson = URLDecoder.decode(encodedUserJson, StandardCharsets.UTF_8.toString())
     val userType = object : TypeToken<Data>() {}.type
     val user: Data = Gson().fromJson(userJson, userType)

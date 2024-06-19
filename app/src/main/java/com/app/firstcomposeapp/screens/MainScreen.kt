@@ -57,9 +57,7 @@ fun MainScreen(navController: NavHostController,onClick: (data: Data) -> Unit) {
             })
         }
     }
-
 }
-
 
 @Composable
 fun UserItem(data: Data, onClick: (data: Data) -> Unit) {

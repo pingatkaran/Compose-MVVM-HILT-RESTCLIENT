@@ -14,6 +14,7 @@ import com.app.firstcomposeapp.screens.DetailsScreen
 import com.app.firstcomposeapp.screens.ListScreen
 import com.app.firstcomposeapp.screens.MainScreen
 import com.app.firstcomposeapp.screens.StickyHeaders
+import com.app.firstcomposeapp.screens.setupBottomNavigationScreen
 import com.app.firstcomposeapp.utils.Screen
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,6 +54,9 @@ fun App() {
             StickyHeaders(navController = navController, onClick = {
                 navController.navigate(Screen.Sticky.route)
             })
+        }
+        composable(route = Screen.BottomNavigation.route) {
+            setupBottomNavigationScreen()
         }
     }
 }
